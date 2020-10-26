@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let temperatureC = +prompt('Nhập nhiệt độ C: ')
+
+    class Temperature {
+        constructor(temp) {
+            this.temp = temp;
+        }
+    }
+
+    function toFahrenheit(temperatureC) {
+        let tempC = new Temperature(temperatureC);
+        let tempF = new Temperature(tempC.temp * 1.8 + 32);
+        return "Chuyển đổi sang độ F là: " + tempF.temp + ' °F';
+    }
+
+    function toKevin(temperatureC) {
+        let tempC = new Temperature(temperatureC);
+        let tempK = new Temperature(tempC.temp + 273);
+        return "Chuyển đổi sang độ K là: " + tempK.temp + ' °K';
+    }
+    document.write("Nhiệt độ là: " + temperatureC + " °C");
+    document.write("<br>");
+    document.write(toFahrenheit(temperatureC));
+    document.write("<br>");
+    document.write(toKevin(temperatureC));
+
+</script>
+</body>
+</html>
